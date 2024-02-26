@@ -10,27 +10,27 @@ layout: default
   <header class="site-masthead">
     {% include menu.html %}
     {% if site.title %}
-      <h2>
+      <h1>
         {{ site.title }}
-      </h2>
+      </h1>
     {% endif %}
     {% if site.title %}
-      <h3>
+      <h2>
         {{ site.description }}
-      </h3>
+      </h2>
     {% endif %}
   </header>
 {% endif %}
 
 <main class="home" id="main" role="main" aria-label="Content">
 
-  <h2 class="content-title divided">
+  <h1 class="content-title divided">
     {% if site.paginate and site.paginate_path and paginator.page > 1 %}
       Page {{ paginator.page }}
     {% else %}
       Contents
     {% endif %}
-  </h2>
+  </h1>
 
   {% if site.paginate and site.paginate_path %}
     
