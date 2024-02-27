@@ -1,5 +1,5 @@
 ---
-title: Three-Body Problem (TV Series) - A Chinese Sci-fi Perspective
+title: Three-Body Problem (CCTV Series) - A Chinese Sci-fi Perspective
 author: Li Shen
 category: sci-fi
 layout: post
@@ -17,4 +17,18 @@ To help us solve this system, we observe some interesting facts about this motio
 
  Back to our 2-body system, the conservation of linear momentum ensures that the momentum of one body is equal and opposite to the momentum of the other ($p_1+p_2=0$, so $p_1=-p_2$). Hence, rather than tracking both objects with 12 variables (6 each), we can reduce our problem to only tracking 1 object since we can derive the motion of the second via the first. This means we can focus just on the relative motion of the 2-body, effectively halving the number of variables to 6 (3 for relative motion and 3 for relative velocity).
 
- Newton's second law has another consequence when applied to rotational motion. Suppose angular momentum $\mathbf{L}=\mathbf{r}\times\mathbf{p}$ is the vector product of position $\mathbf{r}$ and linear momentum $\mathbf{p}$
+ Newton's second law has another consequence when applied to rotational motion. Suppose angular momentum $\mathbf{L}=\mathbf{r}\times\mathbf{p}$ is the cross product of position $\mathbf{r}$ and linear momentum $\mathbf{p}$. The rate of change of angular momentum is given by $d\mathbf{L}/dt=d(\mathbf{r}\times\mathbf{p})/dt=d\mathbf{r}/dt\times \mathbf{p}+\mathbf{r}\times d\mathbf{p}/dt$. The first term of which is $0$ since $d\mathbf{r}/dt\times \mathbf{p}=\mathbf{v}\times m\mathbf{v}$ and the cross-product of a vector with itself is $0$. And so $d\mathbf{L}/dt = \mathbf{r}\times d\mathbf{p}/dt=\mathbf{r}\times \mathbf{F}$. This is the definition of the torque on a particle, i.e. $\mathbf{\tau}=\mathbf{r}\times \mathbf{F}$. Hence, if the total external torque on the stystem is zero, then $d\mathbf{L}/dt=0$, i.e. the angular momentum is conserved. 
+
+  Back to our 2-body system, now with 6 variables (3 in relative position, 3 in relative velocity), the conservation of angular momentum means that both objects must move in a plane relative to each other. To see why this is, we consider that  
+  (a) two bodies moving with respect to each other must have an angular momentum $\mathbf{L}$ defined by their initial position and velocities, and this vector quantity must point in a direction perpendicular to the plane in which the body are moving, (b) in the absence of external torque, $\mathbf{L}$ must remain constant, which is only possible if the 2 bodies move in such a way that their new position and velocity vectors keep producing the same $\mathbf{L}$, (c) the definition of $\mathbf{L}$ as the cross-product of position and velocity vectors, is always perpendicular to the plane defined by these two vectors. Hence, if the direction of $\mathbf{L}$ cannot change due to its conservation, and any deviation from this plane would change the direction of $\mathbf{L}$, hence the 2 bodies must move in the same plane in which they started.
+
+Henceforth, since the 2 objects now move in a confined plane, we do not need to consider all 3 dimensions (and 6 variables). And so with the new simplification, we only need to consider the 2-dimensional plane and thus the 6 variables are reduced to 4 (2 for relative position and 2 for relative velocity).
+
+The last simplification uses two main principles. The first of which is the nature of central forces, which states that the force of each body towards the other only depends on the distance between them and not the direction. The second principle is the conservation of energy, i.e. the kinetic energy (related to the relative speeds of the bodies) and the potential energy (related to the distance of the bodies) remain constant. This allows us to find a relationship between the total energy, the distance between the bodies and their relative speed. Effectively speaking, once we confined the motion to a plane by the conservation of momentum, energy conservation means that we can describe the motion in terms of radial coordinates $(r,\theta)$ since these two coordinates are sufficient to calculate the total energy of the system. Due to the nature of the central force, once you know the distance between the bodies, you can work out everything else about the system. And since we know how $\theta$ changes due to the angular momentum conservation, we are just left with a single variable, the radial distance $r$ between the 2 bodies. 
+
+To summarise, we started with 12 variables and through the observation of the central force along with the three conservation principles (energy, momentum and linear momentum), we were able to reduce the system to 1 variable, this then allows the possibility of an exact (closed-form) solution, such as elliptical orbits. 
+
+The difference with a 3-body problem is that we now start with 18 variables not 12, we also lose the central force principle since the forces between 3 bodies are no longer central because each body is being pulled in different directions by the other 2. And the usual 10 symmetries (6 with linear momentum, 2 with angualr momentum and 2 with centre of mass and energy) will result in an 8-dimensional problem at the most, which is an unsolvable mess.
+
+However, not all is lost and we can still make some progress.
+
